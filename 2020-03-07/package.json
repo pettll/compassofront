@@ -1,0 +1,18 @@
+{
+  "name": "git-searcher",
+  "version": "1.0.0",
+  "description": "Git searcher page developed for the Compasso FrontEnd interview",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass sass/style.scss css/style.css -w"
+  },
+  "author": "Peterson Segatto Müller",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.4.1",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "source-map": "^0.7.3"
+  }
+}
