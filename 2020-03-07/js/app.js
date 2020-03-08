@@ -46,7 +46,7 @@ const showData = () => {
 
       reposContainer.innerHTML = `Repos: <span class="main__profile-value" ><a class="btn btn--shallow btn-sm" type="button" target="_blank" href="https://api.github.com/users/${res.data.login}/repos?client_id=${client_id}&client_secret=${client_secret}">${res.data.public_repos}</a></span>`;
 
-      starredContainer.innerHTML = `Starred: <span class="main__profile-value" ><a class="btn btn--shallow btn-sm" type="button" target="_blank" href="https://api.github.com/users/${res.data.login}/starred?client_id=${client_id}&client_secret=${client_secret}">Link</a></span>`;
+      starredContainer.innerHTML = `Starred: <span class="main__profile-value" ><a class="btn btn--shallow btn-sm" type="button" target="_blank" href="https://api.github.com/users/${res.data.login}/starred?client_id=${client_id}&client_secret=${client_secret}">Abrir</a></span>`;
 
       urlContainer.innerHTML = `URL: <span class="main__profile-value"> <a href="${res.data.html_url}" target="_blank">${res.data.html_url}</a> </span>`;
 
