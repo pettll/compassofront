@@ -1,10 +1,10 @@
-# compassofront
-# ROTEIRO TESTE FRONTEND COMPASSO
+
+## TESTE FRONTEND COMPASSO
 
 Teste prático para os candidatos ao cargo de frontend na COMPASSO.
 
 
-## OBJETIVO
+# OBJETIVO
 
 Aplicação utilizando a api do GITHUB https://developer.github.com/v3/ consumindo os seguintes endpoints:
 
