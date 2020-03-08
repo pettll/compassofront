@@ -21,6 +21,21 @@ const fetchUsers = async (user) => {
 };
 
 
+const fetchRepos = async (repos) => {
+  const api_call_repos = await fetch(`https://api.github.com/users/${repos}/repos?client_id=${client_id}&client_secret=${client_secret}`);
+
+  const data_repos = await api_call_repos.json();
+  return { data_repos }
+};
+
+
+const fetchStarred = async (starred) => {
+  const api_call_starred = await fetch(`https://api.github.com/users/${starred}/starred?client_id=${client_id}&client_secret=${client_secret}`);
+
+  const data_starred = await api_call_starred.json();
+  return { data_starred }
+};
+
 const showData = () => {
     fetchUsers(inputValue.value).then((res) => {
 
@@ -38,7 +53,14 @@ const showData = () => {
       emailContainer.innerHTML = `E-mail: <span class="main__profile-value"> <a href="mailto:${res.data.html_email}" target="_blank">${res.data.html_email}</a> </span>`;
 
 
-    })
+    });
+    fetchRepos(inputValue.value).then((res_repos) => {
+        console.log(res_repos);
+    });
+    fetchStarred(inputValue.value).then((res_starred) => {
+        console.log(res_starred);
+    });
+
 };
 
  searchButton.addEventListener("click", () => {
